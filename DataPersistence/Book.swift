@@ -39,7 +39,7 @@ extension Book {
 
 extension Book {
     static let createOrUpdate: EntityDescriptor<Book, BookObject> = .createOrUpdate(reverseTransformer: BookObject.init)
-    static let all: EntityDescriptor<[Book], BookObject> = .fetch(sortDescriptors: [SortDescriptor.name], transformer: { $0.map(Book.init) })
+    static let all: EntityDescriptor<[Book], BookObject> = .fetch(predicate: nil, sortDescriptors: [SortDescriptor.name], transformer: { $0.map(Book.init) })
     
     var delete: EntityDescriptor<Book, BookObject> {
         return .delete(primaryKey: bookID)

@@ -26,6 +26,10 @@ final class Database {
     func fetch<Model, RealmObject>(with descriptor: EntityDescriptor<Model, RealmObject>) -> Model {
         var results = realm.objects(RealmObject.self)
         
+        if let predicate = descriptor.predicate {
+            results = results.filter(predicate)
+        }
+        
         if descriptor.sortDescriptors.count > 0 {
             results = results.sorted(by: descriptor.sortDescriptors)
         }

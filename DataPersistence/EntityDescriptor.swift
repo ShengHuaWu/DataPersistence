@@ -14,7 +14,7 @@ enum EntityDescriptor<Model, RealmObject: Object> {
     typealias ReverseTransformer = (Model) -> RealmObject
     
     case createOrUpdate(reverseTransformer: ReverseTransformer)
-    case fetch(sortDescriptors: [SortDescriptor], transformer: Transformer)
+    case fetch(predicate: NSPredicate?, sortDescriptors: [SortDescriptor], transformer: Transformer)
     case delete(primaryKey: String)
 }
 
@@ -28,9 +28,18 @@ extension EntityDescriptor {
         }
     }
     
+    var predicate: NSPredicate? {
+        switch self {
+        case let .fetch(predicate, _, _):
+            return predicate
+        default:
+            fatalError("createOrUpdate and delete do NOT have predicate.")
+        }
+    }
+    
     var sortDescriptors: [SortDescriptor] {
         switch self {
-        case let .fetch(sortDescriptors, _):
+        case let .fetch(_, sortDescriptors, _):
             return sortDescriptors
         default:
             fatalError("createOrUpdate and delete do NOT have sort descriptors.")
@@ -39,7 +48,7 @@ extension EntityDescriptor {
     
     var transformer: Transformer {
         switch self {
-        case let .fetch(_, transformer):
+        case let .fetch(_, _, transformer):
             return transformer
         default:
             fatalError("createOrUpdate and delete do NOT have tranformer function.")
