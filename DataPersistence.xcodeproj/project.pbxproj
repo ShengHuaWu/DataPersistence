@@ -16,6 +16,7 @@
 		9BE3A6C91EA3672300E60A51 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE3A6C71EA3672300E60A51 /* RealmSwift.framework */; };
 		9BE3A6CC1EA3692B00E60A51 /* BookObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A6CB1EA3692B00E60A51 /* BookObject.swift */; };
 		9BE3A6CE1EA369AE00E60A51 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A6CD1EA369AE00E60A51 /* Book.swift */; };
+		9BE3A6D01EA36AE700E60A51 /* EntityDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A6CF1EA36AE700E60A51 /* EntityDescriptor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		9BE3A6C71EA3672300E60A51 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		9BE3A6CB1EA3692B00E60A51 /* BookObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookObject.swift; sourceTree = "<group>"; };
 		9BE3A6CD1EA369AE00E60A51 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		9BE3A6CF1EA36AE700E60A51 /* EntityDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityDescriptor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				9B40DD691EA3661C0098EC0A /* Info.plist */,
 				9BE3A6CB1EA3692B00E60A51 /* BookObject.swift */,
 				9BE3A6CD1EA369AE00E60A51 /* Book.swift */,
+				9BE3A6CF1EA36AE700E60A51 /* EntityDescriptor.swift */,
 			);
 			path = DataPersistence;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BE3A6CE1EA369AE00E60A51 /* Book.swift in Sources */,
+				9BE3A6D01EA36AE700E60A51 /* EntityDescriptor.swift in Sources */,
 				9BE3A6CC1EA3692B00E60A51 /* BookObject.swift in Sources */,
 				9B40DD601EA3661C0098EC0A /* ViewController.swift in Sources */,
 				9B40DD5E1EA3661C0098EC0A /* AppDelegate.swift in Sources */,
