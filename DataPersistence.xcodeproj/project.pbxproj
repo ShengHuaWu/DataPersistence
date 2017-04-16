@@ -17,6 +17,7 @@
 		9BE3A6CC1EA3692B00E60A51 /* BookObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A6CB1EA3692B00E60A51 /* BookObject.swift */; };
 		9BE3A6CE1EA369AE00E60A51 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A6CD1EA369AE00E60A51 /* Book.swift */; };
 		9BE3A6D01EA36AE700E60A51 /* EntityDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A6CF1EA36AE700E60A51 /* EntityDescriptor.swift */; };
+		9BE3A6D21EA36C6D00E60A51 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A6D11EA36C6D00E60A51 /* Database.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		9BE3A6CB1EA3692B00E60A51 /* BookObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookObject.swift; sourceTree = "<group>"; };
 		9BE3A6CD1EA369AE00E60A51 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		9BE3A6CF1EA36AE700E60A51 /* EntityDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityDescriptor.swift; sourceTree = "<group>"; };
+		9BE3A6D11EA36C6D00E60A51 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				9BE3A6CB1EA3692B00E60A51 /* BookObject.swift */,
 				9BE3A6CD1EA369AE00E60A51 /* Book.swift */,
 				9BE3A6CF1EA36AE700E60A51 /* EntityDescriptor.swift */,
+				9BE3A6D11EA36C6D00E60A51 /* Database.swift */,
 			);
 			path = DataPersistence;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BE3A6D21EA36C6D00E60A51 /* Database.swift in Sources */,
 				9BE3A6CE1EA369AE00E60A51 /* Book.swift in Sources */,
 				9BE3A6D01EA36AE700E60A51 /* EntityDescriptor.swift in Sources */,
 				9BE3A6CC1EA3692B00E60A51 /* BookObject.swift in Sources */,
