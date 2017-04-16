@@ -19,3 +19,17 @@ final class BookObject: Object {
         return "bookID"
     }
 }
+
+extension BookObject {
+    convenience init(book: Book) {
+        self.init()
+        
+        if book.bookID.characters.count > 0 {
+            self.bookID = book.bookID
+        }
+        
+        self.name = book.name
+        self.comment = book.comment
+        self.rating = book.rating.rawValue
+    }
+}

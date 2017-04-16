@@ -55,3 +55,7 @@ extension EntityDescriptor {
         }
     }
 }
+
+extension SortDescriptor {
+    static let name = SortDescriptor(keyPath: "name", ascending: true)
+}
