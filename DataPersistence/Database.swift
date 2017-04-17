@@ -9,36 +9,36 @@
 import Foundation
 import RealmSwift
 
-final class Database {
+final class Database {    
     private let realm: Realm
     
     init(realm: Realm = try! Realm()) {
         self.realm = realm
     }
     
-    func createOrUpdate<Model, RealmObject>(model: Model, with descriptor: EntityDescriptor<Model, RealmObject>) {
-        let object = descriptor.reverseTransformer(model)
+    func createOrUpdate<Model, RealmObject: Object>(model: Model, with reverseTransformer: (Model) -> RealmObject) {
+        let object = reverseTransformer(model)
         try! realm.write {
             realm.add(object, update: true)
         }
     }
     
-    func fetch<Model, RealmObject>(with descriptor: EntityDescriptor<Model, RealmObject>) -> Model {
+    func fetch<Model, RealmObject>(with request: FetchRequest<Model, RealmObject>) -> Model {
         var results = realm.objects(RealmObject.self)
         
-        if let predicate = descriptor.predicate {
+        if let predicate = request.predicate {
             results = results.filter(predicate)
         }
         
-        if descriptor.sortDescriptors.count > 0 {
-            results = results.sorted(by: descriptor.sortDescriptors)
+        if request.sortDescriptors.count > 0 {
+            results = results.sorted(by: request.sortDescriptors)
         }
         
-        return descriptor.transformer(results)
+        return request.transformer(results)
     }
     
-    func delete<Model, RealmObject>(with descriptor: EntityDescriptor<Model, RealmObject>) {
-        let object = realm.object(ofType: RealmObject.self, forPrimaryKey: descriptor.primaryKey)
+    func delete<RealmObject: Object>(type: RealmObject.Type, with primaryKey: String) {
+        let object = realm.object(ofType: type, forPrimaryKey: primaryKey)
         if let object = object {
             try! realm.write {
                 realm.delete(object)

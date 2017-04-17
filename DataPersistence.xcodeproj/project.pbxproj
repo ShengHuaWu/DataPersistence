@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B0B5B981EA452F90027FEB1 /* FetchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B5B971EA452F90027FEB1 /* FetchRequest.swift */; };
 		9B40DD5E1EA3661C0098EC0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B40DD5D1EA3661C0098EC0A /* AppDelegate.swift */; };
 		9B40DD601EA3661C0098EC0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B40DD5F1EA3661C0098EC0A /* ViewController.swift */; };
 		9B40DD631EA3661C0098EC0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B40DD611EA3661C0098EC0A /* Main.storyboard */; };
@@ -16,7 +17,6 @@
 		9BE3A6C91EA3672300E60A51 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE3A6C71EA3672300E60A51 /* RealmSwift.framework */; };
 		9BE3A6CC1EA3692B00E60A51 /* BookObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A6CB1EA3692B00E60A51 /* BookObject.swift */; };
 		9BE3A6CE1EA369AE00E60A51 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A6CD1EA369AE00E60A51 /* Book.swift */; };
-		9BE3A6D01EA36AE700E60A51 /* EntityDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A6CF1EA36AE700E60A51 /* EntityDescriptor.swift */; };
 		9BE3A6D21EA36C6D00E60A51 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A6D11EA36C6D00E60A51 /* Database.swift */; };
 		9BE3A6D51EA3704B00E60A51 /* DatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A6D41EA3704B00E60A51 /* DatabaseTests.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B0B5B971EA452F90027FEB1 /* FetchRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchRequest.swift; sourceTree = "<group>"; };
 		9B40DD5A1EA3661C0098EC0A /* DataPersistence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataPersistence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B40DD5D1EA3661C0098EC0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B40DD5F1EA3661C0098EC0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,7 +46,6 @@
 		9BE3A6C71EA3672300E60A51 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		9BE3A6CB1EA3692B00E60A51 /* BookObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookObject.swift; sourceTree = "<group>"; };
 		9BE3A6CD1EA369AE00E60A51 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
-		9BE3A6CF1EA36AE700E60A51 /* EntityDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityDescriptor.swift; sourceTree = "<group>"; };
 		9BE3A6D11EA36C6D00E60A51 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		9BE3A6D31EA3704A00E60A51 /* DataPersistenceTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DataPersistenceTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		9BE3A6D41EA3704B00E60A51 /* DatabaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseTests.swift; sourceTree = "<group>"; };
@@ -101,8 +101,8 @@
 				9B40DD691EA3661C0098EC0A /* Info.plist */,
 				9BE3A6CB1EA3692B00E60A51 /* BookObject.swift */,
 				9BE3A6CD1EA369AE00E60A51 /* Book.swift */,
-				9BE3A6CF1EA36AE700E60A51 /* EntityDescriptor.swift */,
 				9BE3A6D11EA36C6D00E60A51 /* Database.swift */,
+				9B0B5B971EA452F90027FEB1 /* FetchRequest.swift */,
 			);
 			path = DataPersistence;
 			sourceTree = "<group>";
@@ -252,8 +252,8 @@
 			files = (
 				9BE3A6D21EA36C6D00E60A51 /* Database.swift in Sources */,
 				9BE3A6CE1EA369AE00E60A51 /* Book.swift in Sources */,
-				9BE3A6D01EA36AE700E60A51 /* EntityDescriptor.swift in Sources */,
 				9BE3A6CC1EA3692B00E60A51 /* BookObject.swift in Sources */,
+				9B0B5B981EA452F90027FEB1 /* FetchRequest.swift in Sources */,
 				9B40DD601EA3661C0098EC0A /* ViewController.swift in Sources */,
 				9B40DD5E1EA3661C0098EC0A /* AppDelegate.swift in Sources */,
 			);

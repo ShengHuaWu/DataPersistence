@@ -33,28 +33,28 @@ class DatabaseTests: XCTestCase {
     func testBookCreation() {
         let newBook = Book.bigLittleLies
         
-        database.createOrUpdate(model: newBook, with: Book.createOrUpdate)
+        database.createOrUpdate(model: newBook, with: BookObject.init)
         
         database.verifyBookCreationOrUpdating(newBook: newBook)
     }
     
     func testBookDeletion() {
         let newBook = Book.southAndWest
-        database.createOrUpdate(model: newBook, with: Book.createOrUpdate)
+        database.createOrUpdate(model: newBook, with: BookObject.init)
         let bookInDB = database.fetch(with: Book.all).first!
         
-        database.delete(with: bookInDB.delete)
+        database.delete(type: BookObject.self, with: bookInDB.bookID)
         
         database.verifyBookDeletion()
     }
     
-    func testDrinkUpdating() {
+    func testBookUpdating() {
         let newBook = Book.fake
-        database.createOrUpdate(model: newBook, with: Book.createOrUpdate)
+        database.createOrUpdate(model: newBook, with: BookObject.init)
         let bookInDB = database.fetch(with: Book.all).first!
         
         let modifiedBook = Book(bookID: bookInDB.bookID, name: "New Name", comment: "Change the rating and the name of this book.", rating: .mediocre)
-        database.createOrUpdate(model: modifiedBook, with: Book.createOrUpdate)
+        database.createOrUpdate(model: modifiedBook, with: BookObject.init)
         
         database.verifyBookCreationOrUpdating(newBook: modifiedBook)
     }
@@ -77,11 +77,4 @@ extension Database {
         let results = fetch(with: Book.all)
         XCTAssertEqual(results.count, 0, "results count", file: file, line: line)
     }
-}
-
-// MARK: - Seed Data
-extension Book {
-    static let bigLittleLies = Book(bookID: "", name: "Big Little Lies", comment: "Awesome!!", rating: .outstanding)
-    static let southAndWest = Book(bookID: "", name: "South and West", comment: nil, rating: .good)
-    static let fake = Book(bookID: "", name: "Fake Book", comment: "This is a bad example.", rating: .notRecommended)
 }

@@ -37,11 +37,9 @@ extension Book {
     }
 }
 
+// MARK: - Seed Data
 extension Book {
-    static let createOrUpdate: EntityDescriptor<Book, BookObject> = .createOrUpdate(reverseTransformer: BookObject.init)
-    static let all: EntityDescriptor<[Book], BookObject> = .fetch(predicate: nil, sortDescriptors: [SortDescriptor.name], transformer: { $0.map(Book.init) })
-    
-    var delete: EntityDescriptor<Book, BookObject> {
-        return .delete(primaryKey: bookID)
-    }
+    static let bigLittleLies = Book(bookID: "", name: "Big Little Lies", comment: "Awesome!!", rating: .outstanding)
+    static let southAndWest = Book(bookID: "", name: "South and West", comment: nil, rating: .good)
+    static let fake = Book(bookID: "", name: "Fake Book", comment: "This is a bad example.", rating: .notRecommended)
 }
