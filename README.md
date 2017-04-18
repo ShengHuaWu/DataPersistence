@@ -117,7 +117,7 @@ extension Book {
 ### Testing
 Because I integrate Realm and RealmSwift into my project via [_Carthage_](https://github.com/Carthage/Carthage),
 it's important to add the variable into _Framework Search Paths_ in _Build Settings_ of my test target before writing some tests.
-![framework-search-paths]()
+![framework-search-paths](https://github.com/ShengHuaWu/DataPersistence/blob/master/Resources/framework%20search%20paths.png)
 It's quite dangerous to use the real Realm database instance for testing because it will mess up the real data.
 Fortunately, Realm provides an in-memory database instance by setting the `inMemoryIdentifier` rather than the `fileURL` on the `Realm.Configuration`.
 ```
